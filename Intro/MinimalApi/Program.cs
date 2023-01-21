@@ -47,5 +47,15 @@ app.MapGet("mix/{routeParam}",
     [FromHeader(Name = "Accept-Encoding")]string? encoding
 ) => $"{routeParam}:{queryParam}:{guidGenerator}:({encoding})");
 
+app.MapGet("httpcontext-1", async context => await context.Response.WriteAsync($"Hello from http context"));
+
+app.MapGet("http", async (HttpRequest request, HttpResponse response) =>
+{
+    var queries = request.QueryString.Value;
+    await response.WriteAsync($"Hello from HttpResponse. Queries were: {queries}");
+});
+
+
+
 app.Run();
 
