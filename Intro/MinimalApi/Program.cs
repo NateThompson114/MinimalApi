@@ -14,6 +14,11 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+// app.UseAuthorization();
+
+app.MapGet("get-example", () => "Hello from GET");
+app.MapPost("post-example", () => "Hello from POST");
+
+app.MapMethods("options-or-head", new[] { "HEAD", "OPTIONS" }, () => "Hello of Map Methods");
 
 app.Run();
