@@ -55,7 +55,14 @@ app.MapGet("http", async (HttpRequest request, HttpResponse response) =>
     await response.WriteAsync($"Hello from HttpResponse. Queries were: {queries}");
 });
 
+app.MapGet("map-point", (MapPoint latAndLong) =>
+{
+    return Results.Ok(latAndLong);
+});
 
+app.MapPost("map-point2", (MapPoint2 latAndLong) =>
+{
+    return Results.Ok(latAndLong);
+});
 
 app.Run();
-
