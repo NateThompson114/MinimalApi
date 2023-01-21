@@ -21,4 +21,9 @@ app.MapPost("post-example", () => "Hello from POST");
 
 app.MapMethods("options-or-head", new[] { "HEAD", "OPTIONS" }, () => "Hello of Map Methods");
 
+app.MapGet("get-params/{age:int}", (int age) => $"Age provided was {age}");
+app.MapGet("advance-params/{id:regex(^[a-z0-9A-Z]+$)}", (string id) => $"Id was {id}");
+app.MapGet("books/{isbn:length(13)}", (string isbn) => $"ISBN is {isbn}");
+
 app.Run();
+
