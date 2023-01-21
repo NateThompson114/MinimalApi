@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Intro", "Intro", "{672872A7-8444-4AFC-87BB-7E58C81E0C21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalApi", "Intro\MinimalApi\MinimalApi.csproj", "{75E5975A-C983-4BFF-AB95-27453EC6BFD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{75E5975A-C983-4BFF-AB95-27453EC6BFD8} = {672872A7-8444-4AFC-87BB-7E58C81E0C21}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75E5975A-C983-4BFF-AB95-27453EC6BFD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75E5975A-C983-4BFF-AB95-27453EC6BFD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75E5975A-C983-4BFF-AB95-27453EC6BFD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75E5975A-C983-4BFF-AB95-27453EC6BFD8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
