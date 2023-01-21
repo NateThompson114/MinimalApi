@@ -65,4 +65,18 @@ app.MapPost("map-point2", (MapPoint2 latAndLong) =>
     return Results.Ok(latAndLong);
 });
 
+
+app.MapGet("raw-text", () => Results.Text("Hello World"));
+app.MapGet("raw-json-obj", () => Results.Json(new {value = "Hello World"}));
+app.MapGet("ok-obj", () => Results.Ok(new {value = "Hello World"}));
+app.MapGet("json-obj", () => Results.Json(new {value = "Hello World"}));
+app.MapGet("redirect", () => Results.Redirect("https://google.com"));
+app.MapGet("download", () => Results.File(@".\myFile.txt"));
+
+app.MapGet("logging", (ILogger<Program> logger) =>
+{
+    logger.LogInformation("Hello from endpoint");
+    return Results.Ok();
+});
+
 app.Run();
